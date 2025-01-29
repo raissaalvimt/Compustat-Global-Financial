@@ -1,71 +1,74 @@
 # Compustat-Global-Financial
+## Analysis of the Impact of Financial Factors on Revenue (TOTAL REVENUE)
 
-# Análise de Impacto de Fatores Financeiros no Faturamento (RECEITA TOTAL)
+### Project Description
+This project aims to analyze the impact of independent variables such as research, EBITDA, and sector on the revenue (TOTAL REVENUE) of companies. The focus is to identify how these variables influence revenue and determine the percentage contribution of each factor to the growth or reduction in revenue.
 
-## **Descrição do Projeto**
-Este projeto tem como objetivo analisar o impacto de variáveis independentes, como **pesquisa**, **EBITDA** e **setor**, no **faturamento (RECEITA TOTAL)** das empresas. O foco é identificar como essas variáveis influenciam a receita e determinar os percentuais de contribuição de cada fator para o crescimento ou redução no faturamento.
+The analysis will be based on financial data provided and will utilize statistical modeling techniques to answer the following question:
 
-A análise será baseada em dados financeiros fornecidos e utilizará técnicas de modelagem estatística para responder à seguinte pergunta:
+> For every dollar invested, how do research, EBITDA, and sector affect the revenue of companies?
 
-- Para cada dólar investido, como **pesquisa**, **EBITDA** e **setor** afetam o faturamento das empresas?
+### Objective
+- Identify the main factors that increase or decrease TOTAL REVENUE.
+- Quantify the percentage contribution of each independent variable to revenue.
+- Provide insights based on specific sectors.
 
----
+### Project Structure
+The project will be structured as follows:
 
-## **Objetivo**
-1. Identificar os principais fatores que aumentam ou diminuem a **RECEITA TOTAL**.
-2. Quantificar a contribuição percentual de cada variável independente no faturamento.
-3. Fornecer insights baseados em setores específicos.
+#### 1. Data Preparation
+**Input:** Dataset containing the variables:
+- `TOTAL_REVENUE` (dependent variable)
+- `RESEARCH` (independent variable)
+- `EBITDA` (independent variable)
+- `SECTOR` (categorical variable)
 
----
+**Data Processing:**
+- Check for missing values and outliers.
+- Transformation and normalization if necessary.
+- Encoding of the categorical variable `SECTOR`.
 
-## **Estrutura do Projeto**
-O projeto será estruturado da seguinte forma:
+#### 2. Methodology
+**Statistical Modeling:**
+- Multiple Linear Regression will be used to estimate the relationship between `TOTAL_REVENUE` and the independent variables.
+- The model will consider the `SECTOR` variable as a dummy variable to analyze differences between sectors.
 
-### **1. Preparação dos Dados**
-- **Entrada**: Conjunto de dados contendo as variáveis:
-  - `RECEITA_TOTAL` (variável dependente)
-  - `PESQUISA` (variável independente)
-  - `EBITDA` (variável independente)
-  - `SETOR` (variável categórica)
-- **Tratamento dos Dados**:
-  - Verificação de valores ausentes e outliers.
-  - Transformação e normalização, se necessário.
-  - Codificação da variável categórica `SETOR`.
+**Validation:**
+- Model evaluation with metrics such as adjusted R², mean absolute error (MAE), and statistical significance of the coefficients.
+- Application of multicollinearity tests (VIF) to ensure model robustness.
 
-### **2. Metodologia**
-- **Modelagem Estatística**:
-  - Será utilizada uma **Regressão Linear Múltipla** para estimar a relação entre a **RECEITA TOTAL** e as variáveis independentes.
-  - O modelo considerará a variável `SETOR` como uma variável dummy para analisar diferenças entre setores.
-- **Validação**:
-  - Avaliação do modelo com métricas como R² ajustado, erro médio absoluto (MAE) e significância estatística dos coeficientes.
-  - Aplicação de testes de multicolinearidade (VIF) para garantir robustez do modelo.
+#### 3. Expected Results
+Quantification of the percentage contribution of:
+- Research in increasing/decreasing revenue.
+- EBITDA as a proxy for operational profitability.
+- Differences between sectors in terms of influence on revenue.
 
-### **3. Resultados Esperados**
-- Quantificação da contribuição percentual de:
-  - **Pesquisa** no aumento/diminuição da receita.
-  - **EBITDA** como proxy de lucratividade operacional.
-  - Diferenças entre setores na influência sobre o faturamento.
-- Visualizações claras para facilitar a interpretação:
-  - Gráficos de dispersão.
-  - Gráficos de barras para análise por setor.
+Clear visualizations to aid interpretation:
+- Scatter plots.
+- Bar graphs for sector-wise analysis.
 
-### **4. Ferramentas Utilizadas**
-- **Linguagem de Programação**:
-  - Python (bibliotecas principais: `pandas`, `statsmodels`, `matplotlib`, `seaborn`).
-- **Software Estatístico**:
-  - Possível uso do R para validação cruzada.
-- **Documentação e Apresentação**:
-  - Relatórios em PDF e gráficos interativos.
+#### 4. Tools Used
+**Programming Language:**
+- Python (main libraries: `pandas`, `statsmodels`, `matplotlib`, `seaborn`).
 
----
+**Statistical Software:**
+- Possible use of R for cross-validation.
 
-## **Requisitos**
-### **Dependências do Projeto**
+**Documentation and Presentation:**
+- Reports in PDF and interactive graphs.
+
+### Project Requirements
+**Project Dependencies:**
 - Python 3.10+
-- Bibliotecas Python:
+- Python Libraries:
   - `pandas`
   - `numpy`
   - `statsmodels`
+  - `seaborn`
+  - `matplotlib`
+  - `scikit-learn`
+- Data file in CSV format.
+
   - `seaborn`
   - `matplotlib`
   - `scikit-learn`
