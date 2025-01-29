@@ -69,9 +69,6 @@ Clear visualizations to aid interpretation:
   - `scikit-learn`
 - Data file in CSV format.
 
-  - `seaborn`
-  - `matplotlib`
-  - `scikit-learn`
-- Arquivo de dados em formato CSV.
+
 
 
